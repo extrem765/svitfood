@@ -1,5 +1,6 @@
 import './Header.scss'
 import Logo from '@/components/Logo'
+import Socials from '@/components/Socials'
 import clsx from 'clsx'
 
 
@@ -37,7 +38,8 @@ export default (props) => {
             ))}
           </ul>
         </nav>
-      
+
+       <Socials className="header__soc1als" />
       </div>
     </header>
   )
