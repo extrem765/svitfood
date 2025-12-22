@@ -15,9 +15,9 @@ export default () => {
         <Button href="/">Link</Button>
         <Field
           label="Phone Number"
-          placeholder="+7 (999) 999-99-99"
+          placeholder=""
           inputMode="tel"
-          mask="+7 (000) 000-00-00"
+          mask=""
           isRequired
         />
       </div>
