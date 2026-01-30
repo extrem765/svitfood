@@ -46,3 +46,5 @@ export default (props) => {
     </div>
   )
 }
+
+//переписати на typescript..?//
