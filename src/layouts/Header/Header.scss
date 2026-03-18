@@ -29,8 +29,6 @@
       display: flex;
       align-items: center;
       column-gap: 60px;
-      color: black;
-      font-size: 20px;
 
       @include tablet {
         column-gap: 30px;
@@ -45,10 +43,11 @@
     }
 
     &-link {
-      display: inline-flex;
-      align-items: center;
-      height: 44px;
-    }
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  color: var(--color-black); // додай це
+}
   }
 
   &__soc1als {
