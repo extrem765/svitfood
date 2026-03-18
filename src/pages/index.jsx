@@ -9,18 +9,7 @@ export const metadata = {
 export default () => {
   return (
     <>
-      <div className="container">
-        <h1>Home page</h1>
-        <Button>Button</Button>
-        <Button href="/">Link</Button>
-        <Field
-          label="Phone Number"
-          placeholder=""
-          inputMode="tel"
-          mask=""
-          isRequired
-        />
-      </div>
+      
       <Hero />
     </>
   )
