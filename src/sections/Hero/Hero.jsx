@@ -7,7 +7,7 @@ export default () => {
       <div
         className="hero__slider swiper"
         data-js-slider={JSON.stringify({
-          spaceBetween: 40,
+          spaceBetween: 120,
           slidesPerView: 'auto',
           centeredSlides: true,
           initialSlide: 1,
@@ -39,7 +39,7 @@ export default () => {
                 name: 'John Smith',
                 date: {
                   dateTime: '2022-03-15',
-                  label: '15 March 2022',
+                  label: '15 March 2025',
                 },
               }}
               imgSrc="/src/assets/images/chicken.jpg"
@@ -69,7 +69,7 @@ export default () => {
                 name: 'John Smith',
                 date: {
                   dateTime: '2022-03-15',
-                  label: '15 March 2022',
+                  label: '15 March 2025',
                 },
               }}
               imgSrc="/src/assets/images/chicken.jpg"
@@ -99,7 +99,7 @@ export default () => {
                 name: 'John Smith',
                 date: {
                   dateTime: '2022-03-15',
-                  label: '15 March 2022',
+                  label: '15 March 2025',
                 },
               }}
               imgSrc="/src/assets/images/chicken.jpg"
