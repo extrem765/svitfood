@@ -1,9 +1,9 @@
 import './HeroCard.scss'
 import clsx from 'clsx'
-//import Icon from '@/components/Icon'
+import Icon from '@/components/Icon'
 import AuthorCard from '@/components/AuthorCard'
-// import Tags from '@/components/Tags'
-// import Button from '@/components/Button'
+import Tags from '@/components/Tags'
+import Button from '@/components/Button'
 
 export default (props) => {
   const {
@@ -34,23 +34,23 @@ export default (props) => {
         <div className="hero-card__description">
           <p>{description}</p>
         </div>
-        {/* <Tags
+        <Tags
           className="hero-card__tags"
           type="rounded"
           items={tags}
-        /> */}
+        />
         <footer className="hero-card__footer">
           <AuthorCard
             className="hero-card__author"
             {...author}
           />
-          {/* <Button
+          <Button
             className="hero-card__button"
             href="/"
           >
             <span>View Recipes</span>
             <Icon name="play" hasFill />
-          </Button> */}
+          </Button>
         </footer>
         <img
           className="hero-card__badge"
