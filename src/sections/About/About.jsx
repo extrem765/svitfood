@@ -1,5 +1,5 @@
 import './About.scss'
-import Section from '@/layouts/Section'
+import Section from '/src/layouts/Section'
 import { Image } from 'minista'
 
 export default () => {
