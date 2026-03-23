@@ -1,8 +1,17 @@
+import Button from '@/components/Button'
 import './Section.scss'
 import clsx from 'clsx'
 
 export default (props) => {
-  const { className, title, titleId, description, children } = props
+  const { 
+    className,
+    title, 
+    titleId, 
+    description,
+    linkLabel,
+    children,
+  
+  } = props
 
   return (
     <section
@@ -17,6 +26,14 @@ export default (props) => {
           <div className="section__description">
             <p>{description}</p>
           </div>
+        )}
+        {linkLabel && (
+          <Button 
+          className="section__link" 
+          href="#"
+          mode="secondary">
+            {linkLabel}
+          </Button>
         )}
       </header>
       <div className="section__body">{children}</div>
