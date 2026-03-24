@@ -12,7 +12,21 @@ export default () => {
       isHeaderVertical
       description="Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim"
     >
-     /
+      <Grid columns={3}>
+        {items.map((item) => {
+          const { type, ...rest } = item
+
+          if (type === 'banner') {
+            return (
+              <RecipeBanner {...rest} key={item.title} />
+            )
+          }
+
+          return (
+            <RecipeCard {...rest} key={item.title} />
+          )
+        })}
+      </Grid>
     </Section>
   )
 }

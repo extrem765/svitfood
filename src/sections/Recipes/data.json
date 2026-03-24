@@ -28,7 +28,7 @@
         "label": "Chicken"
       }
     ],
-    "imgSrc": "/src/assets/images/recipes/1.jpg"
+    "imgSrc": "/src/assets/images/recipes/2.jpg"
   },
   {
     "type": "recipe",
@@ -43,7 +43,7 @@
         "label": "Chicken"
       }
     ],
-    "imgSrc": "/src/assets/images/recipes/1.jpg"
+    "imgSrc": "/src/assets/images/recipes/3.jpg"
   },
   {
     "type": "recipe",
@@ -58,7 +58,7 @@
         "label": "Chicken"
       }
     ],
-    "imgSrc": "/src/assets/images/recipes/1.jpg"
+    "imgSrc": "/src/assets/images/recipes/4.jpg"
   },
   {
     "type": "recipe",
@@ -73,7 +73,7 @@
         "label": "Chicken"
       }
     ],
-    "imgSrc": "/src/assets/images/recipes/1.jpg"
+    "imgSrc": "/src/assets/images/recipes/5.jpg"
   },
   {
     "type": "banner",
@@ -94,7 +94,7 @@
         "label": "Chicken"
       }
     ],
-    "imgSrc": "/src/assets/images/recipes/1.jpg"
+    "imgSrc": "/src/assets/images/recipes/6.jpg"
   },
   {
     "type": "recipe",
@@ -109,7 +109,7 @@
         "label": "Chicken"
       }
     ],
-    "imgSrc": "/src/assets/images/recipes/1.jpg"
+    "imgSrc": "/src/assets/images/recipes/7.jpg"
   },
   {
     "type": "recipe",
@@ -124,6 +124,6 @@
         "label": "Chicken"
       }
     ],
-    "imgSrc": "/src/assets/images/recipes/1.jpg"
+    "imgSrc": "/src/assets/images/recipes/8.jpg"
   }
 ]
