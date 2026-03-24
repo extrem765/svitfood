@@ -3,7 +3,8 @@ import Button from '@/components/Button'
 import Field from '@/components/Field'
 import Categories from '/src/sections/Categories'
 import Recipes from '@/sections/Recipes'
-
+import Subscribe from '@/sections/Subscribe'
+import Banner from '@/sections/Banner'
 export const metadata = {
   title: 'Home',
 }
@@ -15,7 +16,9 @@ export default () => {
       <Hero />
       <Categories />
       <Recipes />
+    <Banner />
 
+     <Subscribe />   
     </>
   )
 }
