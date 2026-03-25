@@ -5,6 +5,7 @@ import Categories from '/src/sections/Categories'
 import Recipes from '@/sections/Recipes'
 import Subscribe from '@/sections/Subscribe'
 import Banner from '@/sections/Banner'
+import InstagramView from '@/sections/InstagramView'
 
 export const metadata = {
   title: 'Home',
@@ -18,7 +19,7 @@ export default () => {
       <Categories />
       <Recipes />
       <Banner />
-
+       <InstagramView />
      <Subscribe />
      
     </>
