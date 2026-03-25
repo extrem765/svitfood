@@ -1,15 +1,6 @@
 import './BurgerButton.scss'
 import clsx from 'clsx'
 
-
-
-
-
-
-
-
-
-
 export default (props) => {
   const { className, extraAttrs } = props
 
