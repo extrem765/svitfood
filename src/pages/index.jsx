@@ -6,6 +6,7 @@ import Recipes from '@/sections/Recipes'
 import Subscribe from '@/sections/Subscribe'
 import Banner from '@/sections/Banner'
 import InstagramView from '@/sections/InstagramView'
+import DailyRecipes from '@/sections/DailyRecipes'
 
 export const metadata = {
   title: 'Home',
@@ -19,7 +20,8 @@ export default () => {
       <Categories />
       <Recipes />
       <Banner />
-       <InstagramView />
+      <InstagramView />
+      <DailyRecipes />
      <Subscribe />
      
     </>

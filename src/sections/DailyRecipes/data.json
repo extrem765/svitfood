@@ -1,0 +1,75 @@
+[
+  {
+    "type": "recipe",
+    "title": "Big and Juicy Wagyu Beef Cheeseburger",
+    "tags": [
+      { "iconName": "timer", "label": "30 Minutes" },
+      { "iconName": "fork-knife", "label": "Chicken" }
+    ],
+    "imgSrc": "/src/assets/images/instagram/1.jpg",
+    "isLiked": true
+  },
+  {
+    "type": "recipe",
+    "title": "Big and Juicy Wagyu Beef Cheeseburger",
+    "tags": [
+      { "iconName": "timer", "label": "30 Minutes" },
+      { "iconName": "fork-knife", "label": "Chicken" }
+    ],
+    "imgSrc": "/src/assets/images/instagram/2.jpg"
+  },
+  {
+    "type": "recipe",
+    "title": "Big and Juicy Wagyu Beef Cheeseburger",
+    "tags": [
+      { "iconName": "timer", "label": "30 Minutes" },
+      { "iconName": "fork-knife", "label": "Chicken" }
+    ],
+    "imgSrc": "/src/assets/images/instagram/3.jpg"
+  },
+  {
+    "type": "recipe",
+    "title": "Big and Juicy Wagyu Beef Cheeseburger",
+    "tags": [
+      { "iconName": "timer", "label": "30 Minutes" },
+      { "iconName": "fork-knife", "label": "Chicken" }
+    ],
+    "imgSrc": "/src/assets/images/instagram/4.jpg"
+  },
+  {
+    "type": "recipe",
+    "title": "Big and Juicy Wagyu Beef Cheeseburger",
+    "tags": [
+      { "iconName": "timer", "label": "30 Minutes" },
+      { "iconName": "fork-knife", "label": "Chicken" }
+    ],
+    "imgSrc": "/src/assets/images/instagram/5.jpg"
+  },
+  {
+    "type": "recipe",
+    "title": "Big and Juicy Wagyu Beef Cheeseburger",
+    "tags": [
+      { "iconName": "timer", "label": "30 Minutes" },
+      { "iconName": "fork-knife", "label": "Chicken" }
+    ],
+    "imgSrc": "/src/assets/images/instagram/6.jpg"
+  },
+  {
+    "type": "recipe",
+    "title": "Big and Juicy Wagyu Beef Cheeseburger",
+    "tags": [
+      { "iconName": "timer", "label": "30 Minutes" },
+      { "iconName": "fork-knife", "label": "Chicken" }
+    ],
+    "imgSrc": "/src/assets/images/instagram/7.jpg"
+  },
+  {
+    "type": "recipe",
+    "title": "Big and Juicy Wagyu Beef Cheeseburger",
+    "tags": [
+      { "iconName": "timer", "label": "30 Minutes" },
+      { "iconName": "fork-knife", "label": "Chicken" }
+    ],
+    "imgSrc": "/src/assets/images/instagram/8.jpg"
+  }
+]
