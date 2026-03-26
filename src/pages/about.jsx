@@ -1,14 +1,18 @@
 import About from '@/sections/About'
-
-export const metadata = {
-  title: 'About',
-}
+import DailyRecipes from '@/sections/DailyRecipes'
+import Subscribe from '@/sections/Subscribe'
 
 export default () => {
   return (
     <>
-      <h1>About page</h1>
       <About />
+      <Subscribe />
+      
+      {/* Тепер ці пропси "зайдуть" у компонент */}
+      <DailyRecipes 
+        title="Check out the delicious recipe" 
+        limit={4} 
+      />
     </>
   )
 }

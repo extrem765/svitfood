@@ -1,2 +1,133 @@
 .about {
+  padding: 60px 80px;
+  background: #ffffff;
+ // замість width
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--color-black);
+    margin-top: 54px
+    ;
+    margin-bottom: 70px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 40px;
+    align-items: stretch;
+    width: 100%;        // щоб займати всю доступну ширину всередині .about
+  }
+
+
+  &__image-wrap {
+    width: 400px;
+    height: 472px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 472px; // Висота як у картинки
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    &--full {
+      flex: 1; 
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+  }
+
+  &__label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #444;
+    text-transform: uppercase;
+  }
+
+  &__input,
+  &__select,
+  &__textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #d8dde3;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+
+    &:focus {
+      border-color: #111;
+    }
+  }
+
+  &__textarea {
+    flex: 1; // Розтягує поле до самої кнопки
+    resize: none;
+  }
+
+  &__select-wrap {
+    position: relative;
+
+    &::after {
+      content: '▼'; // Простий індикатор стрілочки
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12px;
+      pointer-events: none;
+    }
+  }
+
+  &__select {
+    appearance: none;
+    cursor: pointer;
+  }
+
+  // СТИЛІ ДЛЯ КНОПКИ (використовуємо каскад для пріоритету)
+  &__submit.button {
+     font-size: 16px;
+    width: 180px; 
+    height: 64px; 
+    background-color: #111; //)
+    color: #fff;
+    
+    
+    border-radius: 16px;
+    font-weight: 700;
+    
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: #FF6363;
+    }
+  }
 }
