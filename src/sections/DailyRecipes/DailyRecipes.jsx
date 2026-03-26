@@ -4,8 +4,7 @@ import RecipeCard from '@/components/RecipeCard'
 import items from './data.json'
 
 export default (props) => {
-  // Дістаємо title та limit з пропсів
-  // Якщо їх не передали, ставимо стандартні значення
+  
   const { 
     title = "Try this delicious recipe to make your day", 
     limit = items.length 
