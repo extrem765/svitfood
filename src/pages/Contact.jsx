@@ -1,4 +1,6 @@
 import Contact from '@/sections/Contact'
+import Subscribe from '@/sections/Subscribe'
+import DailyRecipes from '@/sections/DailyRecipes'
 
 export const metadata = {
   title: 'Contact',
@@ -14,5 +16,17 @@ const author = {
 }
 
 export default () => {
-  return <Contact author={author} />
+  return (
+    <>
+      <Contact author={author} />
+
+      <Subscribe />
+        
+      {/* Daily Recipes */}
+      <DailyRecipes 
+        title="Check out the delicious recipe" 
+        limit={4} 
+      />
+    </>
+  )
 }
