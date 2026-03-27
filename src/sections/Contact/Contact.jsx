@@ -30,11 +30,8 @@ export default function Contact({ author }) {
           </time>
         </div>
 
-        <p className="article__excerpt">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac
-          ultrices odio. Nulla at congue diam, at dignissim turpis. Ut vehicula
-          sed velit a faucibus. In feugiat vestibulum velit vel pulvinar.
-        </p>
+       <p className="article__excerpt"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. Nulla at congue diam, 
+        at dignissim turpis. Ut vehicula sed velit a faucibus. In feugiat vestibulum velit vel pulvinar. </p>
 
         <div className="article__image">
           <img
@@ -47,16 +44,20 @@ export default function Contact({ author }) {
           <div className="article__content">
 
             <h4>How did you start out in the food industry?</h4>
-            <p>
+
+            <p className="article__text article__text--first">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Curabitur ac ultrices odio. Nulla at congue diam, at dignissim
               turpis. Ut vehicula sed velit a faucibus.
             </p>
 
             <h4>What do you like most about your job?</h4>
-            <p>
+
+            <p className="article__text article__text--second">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Curabitur ac ultrices odio. Nulla at congue diam.
+              Curabitur ac ultrices odio. Nulla at congue diam, at dignissim turpis.
+              Ut vehicula sed velit a faucibus. In feugiat vestibulum velit vel pulvinar.
+              Fusce id mollis ex. Praesent feugiat elementum ex ut suscipit.
             </p>
 
             <h4>Do you cook at home on your days off?</h4>
@@ -68,9 +69,11 @@ export default function Contact({ author }) {
               />
             </div>
 
-            <p>
+            <p className="article__text article__text--third">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Curabitur ac ultrices odio.
+              Curabitur ac ultrices odio. Nulla at congue diam, at dignissim turpis.
+              Ut vehicula sed velit a faucibus. In feugiat vestibulum velit vel pulvinar.
+              Fusce id mollis ex. Praesent feugiat elementum ex ut suscipit.
             </p>
 
             <h4>
@@ -78,9 +81,11 @@ export default function Contact({ author }) {
               in the door?
             </h4>
 
-            <p>
+            <p className="article__text article__text--fourth">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Curabitur ac ultrices odio.
+              Curabitur ac ultrices odio. Nulla at congue diam, at dignissim turpis.
+              Ut vehicula sed velit a faucibus. In feugiat vestibulum velit vel pulvinar.
+              Fusce id mollis ex. Praesent feugiat elementum ex ut suscipit.
             </p>
 
             <blockquote className="article__quote">
@@ -93,9 +98,11 @@ export default function Contact({ author }) {
               professional chef?
             </h4>
 
-            <p>
+            <p className="article__text article__text--fifth">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Curabitur ac ultrices odio.
+              Curabitur ac ultrices odio. Nulla at congue diam, at dignissim turpis.
+              Ut vehicula sed velit a faucibus. In feugiat vestibulum velit vel pulvinar.
+              Fusce id mollis ex. Praesent feugiat elementum ex ut suscipit.
             </p>
 
           </div>

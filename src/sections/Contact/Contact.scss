@@ -1,17 +1,20 @@
 .article {
-  padding: 40px 0;
+  padding: 40px 15px;
 
   &__container {
-    width: 1280px;
+    max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
   }
 
   &__title {
-    font-size: 60px;
+    font-size: clamp(32px, 8vw, 60px);
     font-weight: 700;
     margin-bottom: 20px;
     margin-top: 40px;
-    white-space: nowrap;
+    text-align: center;
+
+    white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -19,11 +22,17 @@
   &__meta {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
+
+    @media (max-width: 480px) {
+      gap: 8px;
+      font-size: 12px;
+    }
   }
 
   &__divider {
@@ -53,15 +62,34 @@
     color: #888;
   }
 
-  &__excerpt {
+&__excerpt {
     font-size: 16px;
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 24px;
+    line-height: 1.6;  
+    color: #000000;
+    margin-bottom: 80px;    
+    text-align: center;
+    padding: 0 40px;
+    justify-content: center;
+
+
+
+
+
+
+
+    @media (max-width: 480px) {
+      padding: 0 20px;
+    }
+
+    @media (min-width: 768px) {
+      padding: 0 110px;
+    }
   }
 
   &__image {
     margin: 24px 0;
+    display: flex;
+    justify-content: center;
 
     img {
       width: 100%;
@@ -72,8 +100,8 @@
 
     &--small {
       img {
-        width: 840px;
-        height: 480px;
+        max-width: 100%;
+        width: 100%;
       }
     }
   }
@@ -81,9 +109,18 @@
   &__body {
     display: grid;
     grid-template-columns: 1fr 120px;
-    gap: 60px;
+    gap: 40px;
     align-items: start;
     margin-top: 40px;
+    max-width: 1120px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      max-width: 700px;
+    }
   }
 
   &__content {
@@ -92,20 +129,43 @@
       font-weight: 700;
       margin: 40px 0 16px;
     }
-
-    p {
-      font-size: 15px;
-      line-height: 1.7;
-      color: #333;
-      
-    }
   }
 
+  // ОСЬ ЄДИНА ЗМІНА (замість article__content p)
+
+  &__text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #000000;
+    margin-bottom: 40px;
+  }
+   
+  &__text--first {
+    margin-bottom: 80px;
+  }
+    &__text--second {
+    margin-bottom: 80px;
+  }
+
+    &__text--third {
+    margin-bottom: 24px;
+  }
+
+  
+  &__text--fifth {
+    margin-bottom: 20px;
+  }
+
+  &__text--fourth {
+    margin-bottom: 40px;
+  }
+
+
   &__quote {
-    border: 2px solid #000;
+    background-color: #f8f8f8;
     padding: 32px;
     margin: 40px 0;
-    font-size: 26px;
+    font-size: clamp(18px, 4vw, 26px);
     font-style: italic;
     font-weight: 500;
     line-height: 1.4;
@@ -114,15 +174,32 @@
 
   &__share {
     position: sticky;
-    top: 100px;
+    top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 
+    @media (max-width: 1024px) {
+      position: static;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+
     .article__socials {
-      .soc1als__list {
+      .socials__list {
+        display: flex;
         flex-direction: column;
+        list-style: none;
+        padding: 0;
+
+        @media (max-width: 1024px) {
+          flex-direction: row;
+          gap: 20px;
+        }
       }
     }
 
@@ -138,6 +215,11 @@
       color: #000;
       font-size: 20px;
       text-decoration: none;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.6;
+      }
     }
   }
 }
