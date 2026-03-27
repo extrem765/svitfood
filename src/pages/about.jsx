@@ -8,7 +8,7 @@ export default () => {
       <About />
       <Subscribe />
       
-      {/* Тепер ці пропси "зайдуть" у компонент */}
+      {/* Daily Recipes */}
       <DailyRecipes 
         title="Check out the delicious recipe" 
         limit={4} 
