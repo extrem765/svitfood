@@ -1,45 +1,206 @@
 .blog {
-  padding: 60px 40px;
-
-  &-container {
-    max-width: 1200px;
+  &__container {
+    max-width: 1280px;
     margin: 0 auto;
+    padding: 48px 20px;
+  }
+
+  &__hero {
+    text-align: center;
+    padding-bottom: 40px;
   }
 
   &__title {
-    font-size: 40px;
-    font-weight: 800;
+    font-size: 62px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    color: #888;
+    margin: 0 auto 24px;
+    max-width: 700px;
+    margin-bottom: 64px;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 8px 8px 8px 20px;
     margin-bottom: 40px;
+  }
+
+  &__search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #333;
+    background: transparent;
+
+    &::placeholder {
+      color: #aaa;
+    }
   }
 
   &__layout {
     display: grid;
-    grid-template-columns: 1fr 320px;
+    grid-template-columns: 1fr 400px;
     gap: 40px;
-  }
-
-  &__main {
-    max-width: 700px;
+    align-items: start;
   }
 
   &__sidebar {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__sidebar-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
   }
 
   &__banner {
-    position: sticky;
-    top: 120px;
-    border-radius: 20px;
-    overflow: hidden;
+    width: 400px;
+    height: 434px;
 
-    img {
+    .recipe-banner {
       width: 100%;
-      display: block;
+      height: 100%;
     }
   }
 
-  &__text {
+&__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding-top: 32px;
+}
+&__page-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    background: #1a1a1a;
+    color: #fff;
+    border-color: #1a1a1a;
+  }
+
+  &--active {
+    background: #1a1a1a;
+    color: #fff;
+    border-color: #1a1a1a;
+  }
+}
+
+  &__page-dots {
+    width: 36px;
+    text-align: center;
+    color: #aaa;
+  }
+}
+
+.blog-post {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid #f0f0f0;
+
+  &__image {
+    width: 290px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  &__excerpt {
     font-size: 16px;
-    line-height: 1.7;
+    color: #888;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #aaa;
+  }
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &__author {
+    font-weight: 500;
+    color: #555;
+  }
+
+  &__date {
+    &::before {
+      content: '·';
+      margin-right: 8px;
+    }
+  }
+}
+
+.blog-recipe {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__image {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+
+  &__author {
+    font-size: 12px;
+    color: #aaa;
   }
 }

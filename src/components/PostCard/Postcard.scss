@@ -1,0 +1,56 @@
+.post-card {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+
+  &__image {
+    width: 120px;
+    height: 88px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  &__excerpt {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #aaa;
+  }
+
+  &__avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__author {
+    font-weight: 500;
+    color: #555;
+  }
+
+  &__date {
+    &::before {
+      content: '·';
+      margin-right: 8px;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "image": "/src/assets/images/recipes/1.jpg",
+      "title": "Crochet Projects for Noodle Lovers",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetuipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
+      "author": { "name": "Wade Warren", "avatar": "/src/assets/images/recipes/1.jpg" },
+      "date": "12 November 2021"
+    },
+    {
+      "id": 2,
+      "image": "/src/assets/images/recipes/2.jpg",
+      "title": "10 Vegetarian Recipes To Eat This Month",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetuipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
+      "author": { "name": "Robert Fox", "avatar": "/src/assets/images/recipes/2.jpg" },
+      "date": "12 November 2021"
+    },
+    {
+      "id": 3,
+      "image": "/src/assets/images/recipes/3.jpg",
+      "title": "Full Guide to Becoming a Professional Chef",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetuipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
+      "author": { "name": "Dianne Russell", "avatar": "/src/assets/images/recipes/3.jpg" },
+      "date": "12 November 2021"
+    },
+    {
+      "id": 4,
+      "image": "/src/assets/images/recipes/4.jpg",
+      "title": "Simple & Delicious Vegetarian Lasagna",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetuipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
+      "author": { "name": "Leslie Alexander", "avatar": "/src/assets/images/recipes/4.jpg" },
+      "date": "12 November 2021"
+    },
+    {
+      "id": 5,
+      "image": "/src/assets/images/recipes/5.jpg",
+      "title": "Plantain and Pinto Stew with Aji Verde",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetuipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
+      "author": { "name": "Courtney Henry", "avatar": "/src/assets/images/recipes/5.jpg" },
+      "date": "12 November 2021"
+    },
+    {
+      "id": 6,
+      "image": "/src/assets/images/recipes/6.jpg",
+      "title": "We're Hiring a Communications Assistant!",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetuipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
+      "author": { "name": "Albert Flores", "avatar": "/src/assets/images/recipes/6.jpg" },
+      "date": "12 November 2021"
+    }
+  ],
+  "recipes": [
+    {
+      "id": 1,
+      "image": "/src/assets/images/recipes/7.jpg",
+      "title": "Chicken Meatballs with Cream Cheese",
+      "author": "Andreas Paula"
+    },
+    {
+      "id": 2,
+      "image": "/src/assets/images/recipes/8.jpg",
+      "title": "Traditional Bolognaise Ragu",
+      "author": "Andreas Paula"
+    },
+    {
+      "id": 3,
+      "image": "/src/assets/images/recipes/0.jpg",
+      "title": "Pork and Chive Chinese Dumplings",
+      "author": "Andreas Paula"
+    }
+  ]
+}
