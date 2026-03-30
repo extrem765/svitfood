@@ -1,0 +1,45 @@
+.blog {
+  padding: 60px 40px;
+
+  &-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 40px;
+  }
+
+  &__layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 40px;
+  }
+
+  &__main {
+    max-width: 700px;
+  }
+
+  &__sidebar {
+    position: relative;
+  }
+
+  &__banner {
+    position: sticky;
+    top: 120px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
