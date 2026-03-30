@@ -2,18 +2,18 @@
   "posts": [
     {
       "id": 1,
-      "image": "/src/assets/images/recipes/1.jpg",
+      "image": "/src/assets/images/recipes/11.jpg",
       "title": "Crochet Projects for Noodle Lovers",
       "excerpt": "Lorem ipsum dolor sit amet, consectetuipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
-      "author": { "name": "Wade Warren", "avatar": "/src/assets/images/recipes/1.jpg" },
+      "author": { "name": "Wade Warren", "avatar": "/src/assets/images/recipes/21.png" },
       "date": "12 November 2021"
     },
     {
       "id": 2,
-      "image": "/src/assets/images/recipes/2.jpg",
+      "image": "/src/assets/images/recipes/22.jpg",
       "title": "10 Vegetarian Recipes To Eat This Month",
       "excerpt": "Lorem ipsum dolor sit amet, consectetuipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
-      "author": { "name": "Robert Fox", "avatar": "/src/assets/images/recipes/2.jpg" },
+      "author": { "name": "Robert Fox", "avatar": "/src/assets/images/recipes/22.png" },
       "date": "12 November 2021"
     },
     {
@@ -21,15 +21,15 @@
       "image": "/src/assets/images/recipes/3.jpg",
       "title": "Full Guide to Becoming a Professional Chef",
       "excerpt": "Lorem ipsum dolor sit amet, consectetuipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
-      "author": { "name": "Dianne Russell", "avatar": "/src/assets/images/recipes/3.jpg" },
+      "author": { "name": "Dianne Russell", "avatar": "/src/assets/images/recipes/23.png" },
       "date": "12 November 2021"
     },
     {
       "id": 4,
-      "image": "/src/assets/images/recipes/4.jpg",
+      "image": "/src/assets/images/recipes/44.jpg",
       "title": "Simple & Delicious Vegetarian Lasagna",
       "excerpt": "Lorem ipsum dolor sit amet, consectetuipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
-      "author": { "name": "Leslie Alexander", "avatar": "/src/assets/images/recipes/4.jpg" },
+      "author": { "name": "Leslie Alexander", "avatar": "/src/assets/images/recipes/24.png" },
       "date": "12 November 2021"
     },
     {
@@ -37,15 +37,15 @@
       "image": "/src/assets/images/recipes/5.jpg",
       "title": "Plantain and Pinto Stew with Aji Verde",
       "excerpt": "Lorem ipsum dolor sit amet, consectetuipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
-      "author": { "name": "Courtney Henry", "avatar": "/src/assets/images/recipes/5.jpg" },
+      "author": { "name": "Courtney Henry", "avatar": "/src/assets/images/recipes/25.png" },
       "date": "12 November 2021"
     },
     {
       "id": 6,
-      "image": "/src/assets/images/recipes/6.jpg",
+      "image": "/src/assets/images/recipes/66.jpg",
       "title": "We're Hiring a Communications Assistant!",
       "excerpt": "Lorem ipsum dolor sit amet, consectetuipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim",
-      "author": { "name": "Albert Flores", "avatar": "/src/assets/images/recipes/6.jpg" },
+      "author": { "name": "Albert Flores", "avatar": "/src/assets/images/recipes/26.png" },
       "date": "12 November 2021"
     }
   ],
@@ -64,7 +64,7 @@
     },
     {
       "id": 3,
-      "image": "/src/assets/images/recipes/0.jpg",
+      "image": "/src/assets/images/recipes/00.jpg",
       "title": "Pork and Chive Chinese Dumplings",
       "author": "Andreas Paula"
     }
