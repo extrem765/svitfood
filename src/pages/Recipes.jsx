@@ -1,9 +1,5 @@
-import Cook from '@/sections/cook'
+import Cook from '@/sections/Cook'
 import Subscribe from '@/sections/Subscribe'
-
-export const metadata = {
-  title: 'Cook',
-}
 
 export default function CookPage() {
   return (
