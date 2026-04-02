@@ -3,7 +3,7 @@
   font-family: 'Inter', sans-serif;
 
   &__container {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -21,21 +21,6 @@
     max-width: 700px;
   }
 
-  &__actions {
-    display: flex;
-    gap: 15px;
-  }
-
-  &__action-btn {
-    background: #E7FAFE;
-    border: none;
-    padding: 15px 25px;
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 12px;
-  }
-
   &__meta {
     display: flex;
     align-items: center;
@@ -43,25 +28,75 @@
     margin-bottom: 40px;
   }
 
-  &__stats {
+  &__actions {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+  }
+
+  &__action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
+
+    span {
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+&__stats {
     display: flex;
     gap: 40px;
-    border-left: 1px solid rgba(0,0,0,0.1);
+    border-left: 1px solid rgba(0,0,0,0.1); // Лінія після автора
     padding-left: 40px;
   }
 
   &__stat-item {
     display: flex;
-    flex-direction: column;
-    gap: 4px;
-    .Cook__label { font-size: 12px; font-weight: 700; opacity: 0.6; }
-    .Cook__value { font-size: 14px; font-weight: 500; }
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding-right: 40px; // Відступ до лінії
+    border-right: 1px solid rgba(0,0,0,0.1); // Лінія ПІСЛЯ елемента
+
+    &:last-child {
+      border-right: none; // Прибираємо лінію у останнього елемента (Chicken)
+      padding-right: 0;
+    }
+
+    .Cook__stat-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .Cook__stat-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .Cook__label {
+      font-size: 14px;
+      font-weight: 700;
+      opacity: 0.6;
+    }
+
+    .Cook__value {
+      font-size: 14px;
+      font-weight: 500;
+    }
   }
 
-  // Hero Section
+  /* HERO BLOCK */
   &__hero-row {
     display: grid;
-    grid-template-columns: 1fr 340px;
+    grid-template-columns: 1fr 400px;
     gap: 40px;
     margin-bottom: 40px;
   }
@@ -92,6 +127,7 @@
     cursor: pointer;
   }
 
+  /* NUTRITION CARD */
   &__nutrition {
     background: #E7FAFE;
     border-radius: 30px;
@@ -99,9 +135,15 @@
     display: flex;
     flex-direction: column;
 
-    &-title { font-size: 24px; margin-bottom: 20px; }
+    &-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
     &-list {
-      list-style: none; padding: 0;
+      list-style: none;
+      padding: 0;
+
       li {
         display: flex;
         justify-content: space-between;
@@ -109,9 +151,13 @@
         border-bottom: 1px solid rgba(0,0,0,0.05);
         font-size: 14px;
         color: rgba(0,0,0,0.6);
-        strong { color: #000; }
+
+        strong {
+          color: #000;
+        }
       }
     }
+
     &-note {
       margin-top: auto;
       font-size: 12px;
@@ -121,6 +167,7 @@
     }
   }
 
+  /* INTRO TEXT */
   &__intro-text {
     font-size: 16px;
     color: rgba(0,0,0,0.6);
@@ -128,16 +175,37 @@
     margin-bottom: 60px;
   }
 
-  // Grid Layout
+  /* MAIN CONTENT GRID */
   &__content-grid {
     display: grid;
-    grid-template-columns: 1fr 340px;
+    grid-template-columns: 1fr 400px;
     gap: 60px;
   }
 
-  &__section-title { font-size: 32px; margin-bottom: 30px; }
+  /* SIDEBAR */
+  &__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
 
-  &__ing-subtitle { font-size: 20px; margin: 20px 0; }
+  /* BANNER SIZE FIX */
+  &__banner-wrapper {
+    width: 400px;
+    height: 434px;
+  }
+
+  /* INGREDIENTS */
+  &__section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  &__ing-subtitle {
+    font-size: 20px;
+    margin: 20px 0;
+  }
 
   &__checkbox-item {
     display: flex;
@@ -145,7 +213,12 @@
     gap: 15px;
     padding: 15px 0;
     border-bottom: 1px solid #eee;
-    label { font-size: 16px; cursor: pointer; }
+
+    label {
+      font-size: 16px;
+      cursor: pointer;
+    }
+
     input[type="checkbox"] {
       width: 20px;
       height: 20px;
@@ -153,23 +226,64 @@
     }
   }
 
-  // Directions Step
+  /* DIRECTIONS */
   &__step {
     margin-bottom: 40px;
-    &-number { font-size: 20px; font-weight: 700; display: block; margin-bottom: 15px; }
-    &-desc { font-size: 16px; color: rgba(0,0,0,0.6); line-height: 1.8; margin-bottom: 20px; }
-    &-img { width: 100%; border-radius: 20px; margin-bottom: 20px; }
-    &-divider { border: 0; border-top: 1px solid #eee; margin-top: 40px; }
+
+    &-number {
+      font-size: 20px;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    &-desc {
+      font-size: 16px;
+      color: rgba(0,0,0,0.6);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    &-img {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    &-divider {
+      border: 0;
+      border-top: 1px solid #eee;
+      margin-top: 40px;
+    }
   }
 
-  // Sidebar Recipes
-  &__sidebar-title { font-size: 24px; margin-bottom: 20px; }
+  /* OTHER RECIPES */
+  &__sidebar-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
   &__recipe-card {
     display: flex;
     gap: 15px;
     margin-bottom: 20px;
-    img { width: 120px; height: 90px; object-fit: cover; border-radius: 15px; }
-    h5 { font-size: 14px; margin-bottom: 5px; line-height: 1.4; }
-    span { font-size: 12px; opacity: 0.5; }
+
+    img {
+      width: 120px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    h5 {
+      font-size: 14px;
+      margin-bottom: 5px;
+      line-height: 1.4;
+    }
+
+    span {
+      font-size: 12px;
+      opacity: 0.5;
+    }
   }
 }
