@@ -4,16 +4,20 @@ import RecipeBanner from '@/components/RecipeBanner';
 
 import heroImg from '@/assets/images/cook/fon.jpg';
 import middleImg from '@/assets/images/cook/fon2.jpg';
-import bannerImg from '@/assets/images/cook/banner.jpg';
-import other1Img from '@/assets/images/cook/other1.jpg';
-import other2Img from '@/assets/images/cook/other2.jpg';
-import other3Img from '@/assets/images/cook/other3.jpg';
+import bannerImg from '@/assets/images/cook/0.jpg';
 import img33 from '@/assets/images/cook/33.png';
 import img34 from '@/assets/images/cook/34.png';
 import timerIcon from '@/assets/icons/timer.svg';
 import forkKnifeIcon from '@/assets/icons/fork-knife.svg';
 
+// Оновлені імпорти для картинок у Sidebar
+import other1Img from '@/assets/images/cook/1.jpg';
+import other2Img from '@/assets/images/cook/2.jpg';
+import other3Img from '@/assets/images/cook/3.jpg';
+
 export default function Cook() {
+  const fullDescription = "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.";
+
   return (
     <section className="Cook">
       <div className="Cook__container">
@@ -28,7 +32,7 @@ export default function Cook() {
         {/* META (Author, Stats, Actions) */}
         <div className="Cook__meta">
           <AuthorCard
-            imgSrc="/src/assets/images/cook/author.jpg" 
+            imgSrc="/src/assets/images/cook/author.jpg"
             name="John Smith"
             date={{
               dateTime: "2025-03-15",
@@ -103,10 +107,10 @@ export default function Cook() {
         </div>
 
         <p className="Cook__intro-text">
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi adad aliquip ex ea commodo consequat.
-        Duis aute irure  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi adad aliquip ex ea commodo consequat.
+          Duis aute irure in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
 
         {/* MAIN GRID CONTENT */}
@@ -136,9 +140,9 @@ export default function Cook() {
               <div className="Cook__ing-group">
                 <h4 className="Cook__ing-subtitle">For the sauce</h4>
                 {[
-                  '2 tbsp soy sauce',
-                  '1 tsp sesame oil',
-                  '1 garlic clove, minced'
+                  'Lorem ipsum dolor sit amet',
+                  'Lorem ipsum dolor sit amet',
+                  'Lorem ipsum dolor sit amet'
                 ].map((item, idx) => (
                   <div className="Cook__checkbox-item" key={idx}>
                     <input type="checkbox" id={`sauce-${idx}`} />
@@ -158,17 +162,18 @@ export default function Cook() {
                     <span className="Cook__step-number">{step}. Step title</span>
                   </div>
 
-                  <p className="Cook__step-desc">
-                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                  </p>
+                  {/* Основний текст кроку */}
+                  <p className="Cook__step-desc">{fullDescription}</p>
                   
+                  {/* Контент тільки для першого кроку */}
                   {step === 1 && (
-                    <img className="Cook__step-img" src={middleImg} alt="Cooking process" />
+                    <>
+                      <img className="Cook__step-img" src={middleImg} alt="Cooking process" />
+                      {/* Текст ПІД картинкою */}
+                      <p className="Cook__step-desc">{fullDescription}</p>
+                    </>
                   )}
                   
-                  <p className="Cook__step-desc">
-                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                  </p>
                   <hr className="Cook__step-divider" />
                 </div>
               ))}
@@ -193,10 +198,15 @@ export default function Cook() {
                 </div>
               ))}
             </div>
-
-            <div className="Cook__banner-wrapper">
-              <RecipeBanner imgSrc={bannerImg} title="Delicious Banner Recipe" />
+           <div className="Cook__banner-wrapper">
+             {/* Додаємо той самий клас blog__banner, якщо він має важливі стилі */}
+             <div className="blog__banner">
+              <RecipeBanner
+             bgImgSrc={bannerImg} // Передаємо імпортовану змінну
+             site="www.foodieland.com"
+              />
             </div>
+          </div>
           </aside>
 
         </div> {/* Кінець Cook__content-grid */}

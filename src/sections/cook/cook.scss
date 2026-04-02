@@ -8,6 +8,9 @@
     padding: 0 20px;
   }
 
+  // ==========================================
+  // HEADER SECTION
+  // ==========================================
   &__header {
     display: flex;
     justify-content: space-between;
@@ -19,13 +22,6 @@
     font-size: 50px;
     font-weight: 700;
     max-width: 700px;
-  }
-
-  &__meta {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    margin-bottom: 40px;
   }
 
   &__actions {
@@ -51,10 +47,20 @@
     }
   }
 
+  // ==========================================
+  // META SECTION
+  // ==========================================
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 40px;
+  }
+
   &__stats {
     display: flex;
     gap: 40px;
-    border-left: 1px solid rgba(0,0,0,0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
     padding-left: 40px;
   }
 
@@ -64,7 +70,7 @@
     align-items: center;
     gap: 12px;
     padding-right: 40px;
-    border-right: 1px solid rgba(0,0,0,0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
 
     &:last-child {
       border-right: none;
@@ -94,7 +100,9 @@
     }
   }
 
-  /* HERO BLOCK */
+  // ==========================================
+  // HERO SECTION
+  // ==========================================
   &__hero-row {
     display: grid;
     grid-template-columns: 1fr 400px;
@@ -107,6 +115,7 @@
     border-radius: 30px;
     overflow: hidden;
     height: 100%;
+    aspect-ratio: 16 / 9; // Допомагає тримати форму на мобілках
   }
 
   &__hero-image {
@@ -122,13 +131,13 @@
     transform: translate(-50%, -50%);
     width: 80px;
     height: 80px;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 50%;
     border: none;
     cursor: pointer;
+    z-index: 2;
   }
 
-  /* NUTRITION CARD */
   &__nutrition {
     background: #E7FAFE;
     border-radius: 30px;
@@ -149,9 +158,9 @@
         display: flex;
         justify-content: space-between;
         padding: 12px 0;
-        border-bottom: 1px solid rgba(0,0,0,0.05);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         font-size: 18px;
-        color: rgba(0,0,0,0.6);
+        color: rgba(0, 0, 0, 0.6);
 
         strong {
           color: #000;
@@ -162,52 +171,39 @@
     &-note {
       margin-top: auto;
       font-size: 16px;
-      color: rgba(0,0,0,0.5);
+      color: rgba(0, 0, 0, 0.5);
       text-align: center;
       line-height: 1.5;
     }
   }
 
-  /* INTRO TEXT */
   &__intro-text {
     font-size: 16px;
-    color: rgba(0,0,0,0.6);
+    color: rgba(0, 0, 0, 0.6);
     line-height: 1.8;
     margin-bottom: 60px;
   }
 
-  /* MAIN CONTENT GRID */
+  // ==========================================
+  // CONTENT GRID
+  // ==========================================
   &__content-grid {
     display: grid;
     grid-template-columns: 1fr 400px;
     gap: 60px;
   }
 
-  /* SIDEBAR */
-  &__sidebar {
+  &__main-column {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    align-items: center;
   }
 
-  /* BANNER SIZE FIX */
-  &__banner-wrapper {
-    width: 400px;
-    height: 434px;
-  }
-
-  /* INGREDIENTS - Тут я вставив оновлену логіку з галочкою */
   &__section-title {
     font-size: 36px;
     margin-bottom: 30px;
+    font-weight: 700;
   }
 
-&__ing-subtitle {
-    font-size: 24px;
-    font-weight: 700;
-    margin: 20px 0;
-  }
   &__checkbox-item {
     display: flex;
     align-items: center;
@@ -218,65 +214,23 @@
     label {
       font-size: 16px;
       cursor: pointer;
-      user-select: none;
     }
 
     input[type="checkbox"] {
-      -webkit-appearance: none;
-      -moz-appearance: none;
       appearance: none;
-
       width: 20px;
       height: 20px;
       border: 2px solid #000;
       border-radius: 50%;
       background-color: #fff;
-      cursor: pointer;
-      position: relative;
       flex-shrink: 0;
-      transition: background 0.2s, border-color 0.2s;
+      position: relative;
 
       &:checked {
         background-color: #000;
-        border-color: #000;
       }
 
-      /* Малювання галочки всередині */
       &:checked::after {
-        content: '';
-        position: absolute;
-        top: 45%; /* Трохи вище центру для кращого вигляду */
-        left: 50%;
-        width: 5px;
-        height: 9px;
-        border: solid #fff;
-        border-width: 0 2px 2px 0;
-        transform: translate(-50%, -50%) rotate(45deg);
-      }
-    }
-  }
-&__step {
-    margin-bottom: 40px;
-
-    &-header {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 15px;
-    }
-
-    /* Той самий круглий індикатор, що і в інгредієнтах */
-    &-indicator {
-      width: 24px;
-      height: 24px;
-      border: 2px solid #000;
-      border-radius: 50%;
-      background-color: #ffffff; // Чорний за замовчуванням
-      position: relative;
-      flex-shrink: 0;
-
-      /* Біла галочка всередині */
-      &::after {
         content: '';
         position: absolute;
         top: 45%;
@@ -288,27 +242,49 @@
         transform: translate(-50%, -50%) rotate(45deg);
       }
     }
+  }
+
+  &__directions {
+    margin-top: 60px;
+  }
+
+  &__step {
+    margin-bottom: 40px;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    &-indicator {
+      width: 24px;
+      height: 24px;
+      border: 2px solid #000;
+      border-radius: 50%;
+      background-color: #fff;
+      flex-shrink: 0;
+    }
 
     &-number {
       font-size: 20px;
       font-weight: 700;
-      display: block;
-      // margin-bottom прибираємо, бо тепер є gap у header
     }
 
     &-desc {
       font-size: 16px;
-      color: rgba(0,0,0,0.6);
+      color: rgba(0, 0, 0, 0.6);
       line-height: 1.8;
       margin-bottom: 20px;
-      padding-left: 39px; // Щоб текст був під заголовком, а не під кружечком
+      padding-left: 39px; 
     }
 
     &-img {
       width: 100%;
       border-radius: 20px;
       margin-bottom: 20px;
-      margin-left: 39px; // Вирівнювання картинки по тексту
+      margin-left: 39px; 
       max-width: calc(100% - 39px);
     }
 
@@ -319,33 +295,131 @@
     }
   }
 
-  /* OTHER RECIPES */
-  &__sidebar-title {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-
   &__recipe-card {
     display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
 
     img {
-      width: 120px;
-      height: 90px;
+      width: 180px;
+      height: 120px;
       object-fit: cover;
       border-radius: 15px;
+      flex-shrink: 0;
     }
 
     h5 {
-      font-size: 14px;
-      margin-bottom: 5px;
-      line-height: 1.4;
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
     }
 
     span {
-      font-size: 12px;
+      font-size: 14px;
       opacity: 0.5;
+    }
+  }
+
+  &__banner-wrapper {
+    width: 100%; // Змінено на 100% для адаптивності всередині сайдбару
+    max-width: 400px;
+    height: 434px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-top: 80px;
+  }
+
+  // ==========================================
+  // MEDIA QUERIES (Адаптація)
+  // ==========================================
+
+  // ПЛАНШЕТ (До 1024px)
+  @media (max-width: 1024px) {
+    &__hero-row, &__content-grid {
+      grid-template-columns: 1fr; // Перехід в одну колонку
+      gap: 30px;
+    }
+
+    &__sidebar {
+      margin-top: 40px;
+    }
+
+    &__banner-wrapper {
+      max-width: 100%; // Розтягуємо банер на всю ширину
+      margin-top: 40px;
+    }
+
+    &__stats {
+      gap: 20px;
+      padding-left: 20px;
+    }
+
+    &__meta {
+      gap: 30px;
+      flex-wrap: wrap; // Щоб елементи не вилазили за екран
+    }
+  }
+
+  // МОБІЛКА (До 768px)
+  @media (max-width: 768px) {
+    padding: 20px 0;
+
+    &__header {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__actions {
+      margin-left: 0;
+      width: 100%;
+      justify-content: flex-start;
+    }
+
+    &__meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    &__stats {
+      border-left: none;
+      padding-left: 0;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+    }
+
+    &__stat-item {
+      border-right: none;
+      padding-right: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding-bottom: 10px;
+      width: 100%;
+    }
+
+    &__section-title {
+      font-size: 28px;
+    }
+
+    &__step-desc, &__step-img {
+      padding-left: 0;
+      margin-left: 0;
+      max-width: 100%;
+    }
+
+    &__recipe-card {
+      img {
+        width: 120px;
+        height: 80px;
+      }
+      h5 {
+        font-size: 16px;
+      }
     }
   }
 }
