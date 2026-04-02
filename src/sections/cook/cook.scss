@@ -16,7 +16,7 @@
   }
 
   &__title {
-    font-size: 48px;
+    font-size: 50px;
     font-weight: 700;
     max-width: 700px;
   }
@@ -149,7 +149,7 @@
         justify-content: space-between;
         padding: 12px 0;
         border-bottom: 1px solid rgba(0,0,0,0.05);
-        font-size: 14px;
+        font-size: 18px;
         color: rgba(0,0,0,0.6);
 
         strong {
@@ -160,7 +160,7 @@
 
     &-note {
       margin-top: auto;
-      font-size: 12px;
+      font-size: 16px;
       color: rgba(0,0,0,0.5);
       text-align: center;
       line-height: 1.5;
