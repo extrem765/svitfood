@@ -50,10 +50,11 @@
       font-weight: 600;
     }
   }
-&__stats {
+
+  &__stats {
     display: flex;
     gap: 40px;
-    border-left: 1px solid rgba(0,0,0,0.1); // Лінія після автора
+    border-left: 1px solid rgba(0,0,0,0.1);
     padding-left: 40px;
   }
 
@@ -62,11 +63,11 @@
     flex-direction: row;
     align-items: center;
     gap: 12px;
-    padding-right: 40px; // Відступ до лінії
-    border-right: 1px solid rgba(0,0,0,0.1); // Лінія ПІСЛЯ елемента
+    padding-right: 40px;
+    border-right: 1px solid rgba(0,0,0,0.1);
 
     &:last-child {
-      border-right: none; // Прибираємо лінію у останнього елемента (Chicken)
+      border-right: none;
       padding-right: 0;
     }
 
@@ -196,17 +197,17 @@
     height: 434px;
   }
 
-  /* INGREDIENTS */
+  /* INGREDIENTS - Тут я вставив оновлену логіку з галочкою */
   &__section-title {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 30px;
   }
 
-  &__ing-subtitle {
-    font-size: 20px;
+&__ing-subtitle {
+    font-size: 24px;
+    font-weight: 700;
     margin: 20px 0;
   }
-
   &__checkbox-item {
     display: flex;
     align-items: center;
@@ -217,24 +218,82 @@
     label {
       font-size: 16px;
       cursor: pointer;
+      user-select: none;
     }
 
     input[type="checkbox"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
       width: 20px;
       height: 20px;
-      accent-color: #000;
+      border: 2px solid #000;
+      border-radius: 50%;
+      background-color: #fff;
+      cursor: pointer;
+      position: relative;
+      flex-shrink: 0;
+      transition: background 0.2s, border-color 0.2s;
+
+      &:checked {
+        background-color: #000;
+        border-color: #000;
+      }
+
+      /* Малювання галочки всередині */
+      &:checked::after {
+        content: '';
+        position: absolute;
+        top: 45%; /* Трохи вище центру для кращого вигляду */
+        left: 50%;
+        width: 5px;
+        height: 9px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
     }
   }
-
-  /* DIRECTIONS */
-  &__step {
+&__step {
     margin-bottom: 40px;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    /* Той самий круглий індикатор, що і в інгредієнтах */
+    &-indicator {
+      width: 24px;
+      height: 24px;
+      border: 2px solid #000;
+      border-radius: 50%;
+      background-color: #ffffff; // Чорний за замовчуванням
+      position: relative;
+      flex-shrink: 0;
+
+      /* Біла галочка всередині */
+      &::after {
+        content: '';
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        width: 5px;
+        height: 9px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
 
     &-number {
       font-size: 20px;
       font-weight: 700;
       display: block;
-      margin-bottom: 15px;
+      // margin-bottom прибираємо, бо тепер є gap у header
     }
 
     &-desc {
@@ -242,12 +301,15 @@
       color: rgba(0,0,0,0.6);
       line-height: 1.8;
       margin-bottom: 20px;
+      padding-left: 39px; // Щоб текст був під заголовком, а не під кружечком
     }
 
     &-img {
       width: 100%;
       border-radius: 20px;
       margin-bottom: 20px;
+      margin-left: 39px; // Вирівнювання картинки по тексту
+      max-width: calc(100% - 39px);
     }
 
     &-divider {
@@ -259,7 +321,7 @@
 
   /* OTHER RECIPES */
   &__sidebar-title {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 20px;
   }
 

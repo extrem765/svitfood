@@ -3,7 +3,6 @@ import AuthorCard from '@/components/AuthorCard';
 import RecipeBanner from '@/components/RecipeBanner';
 
 import heroImg from '@/assets/images/cook/fon.jpg';
-import authorImg from '@/assets/images/cook/author.jpg';
 import middleImg from '@/assets/images/cook/fon2.jpg';
 import bannerImg from '@/assets/images/cook/banner.jpg';
 import other1Img from '@/assets/images/cook/other1.jpg';
@@ -57,7 +56,7 @@ export default function Cook() {
             <div className="Cook__stat-item">
               <img src={forkKnifeIcon} alt="Category" className="Cook__stat-icon" />
               <div className="Cook__stat-info">
-               
+                <span className="Cook__label">CATEGORY</span>
                 <span className="Cook__value">Chicken</span>
               </div>
             </div>
@@ -104,8 +103,10 @@ export default function Cook() {
         </div>
 
         <p className="Cook__intro-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi adad aliquip ex ea commodo consequat.
+        Duis aute irure  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
 
         {/* MAIN GRID CONTENT */}
@@ -119,11 +120,11 @@ export default function Cook() {
               <div className="Cook__ing-group">
                 <h4 className="Cook__ing-subtitle">For main dish</h4>
                 {[
-                  '2 cups cooked rice',
-                  '200g chicken breast',
-                  '1 carrot, diced',
-                  '1/2 cup peas',
-                  '2 eggs'
+                  'Lorem ipsum dolor sit amet',
+                  'Lorem ipsum dolor sit amet',
+                  'Lorem ipsum dolor sit amet',
+                  'Lorem ipsum dolor sit amet',
+                  'Lorem ipsum dolor sit amet'
                 ].map((item, idx) => (
                   <div className="Cook__checkbox-item" key={idx}>
                     <input type="checkbox" id={`main-${idx}`} />
@@ -152,13 +153,19 @@ export default function Cook() {
               <h2 className="Cook__section-title">Directions</h2>
               {[1, 2, 3].map(step => (
                 <div className="Cook__step" key={step}>
-                  <span className="Cook__step-number">{step}. Step title</span>
+                  <div className="Cook__step-header">
+                    <span className="Cook__step-indicator"></span> 
+                    <span className="Cook__step-number">{step}. Step title</span>
+                  </div>
+
                   <p className="Cook__step-desc">
                     Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
                   </p>
+                  
                   {step === 1 && (
                     <img className="Cook__step-img" src={middleImg} alt="Cooking process" />
                   )}
+                  
                   <p className="Cook__step-desc">
                     Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
                   </p>
@@ -166,7 +173,7 @@ export default function Cook() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> {/* Кінець Cook__main-column */}
 
           {/* SIDEBAR */}
           <aside className="Cook__sidebar">
@@ -191,9 +198,9 @@ export default function Cook() {
               <RecipeBanner imgSrc={bannerImg} title="Delicious Banner Recipe" />
             </div>
           </aside>
-        </div>
 
-      </div>
+        </div> {/* Кінець Cook__content-grid */}
+      </div> {/* Кінець Cook__container */}
     </section>
   );
 }
