@@ -162,14 +162,14 @@ export default function Cook() {
                     <span className="Cook__step-number">{step}. Step title</span>
                   </div>
 
-                  {/* Основний текст кроку */}
+                 
                   <p className="Cook__step-desc">{fullDescription}</p>
                   
-                  {/* Контент тільки для першого кроку */}
+                  
                   {step === 1 && (
                     <>
                       <img className="Cook__step-img" src={middleImg} alt="Cooking process" />
-                      {/* Текст ПІД картинкою */}
+                     
                       <p className="Cook__step-desc">{fullDescription}</p>
                     </>
                   )}
@@ -178,7 +178,7 @@ export default function Cook() {
                 </div>
               ))}
             </div>
-          </div> {/* Кінець Cook__main-column */}
+          </div> 
 
           {/* SIDEBAR */}
           <aside className="Cook__sidebar">
@@ -199,18 +199,18 @@ export default function Cook() {
               ))}
             </div>
            <div className="Cook__banner-wrapper">
-             {/* Додаємо той самий клас blog__banner, якщо він має важливі стилі */}
+             
              <div className="blog__banner">
               <RecipeBanner
-             bgImgSrc={bannerImg} // Передаємо імпортовану змінну
+             bgImgSrc={bannerImg} 
              site="www.foodieland.com"
               />
             </div>
           </div>
           </aside>
 
-        </div> {/* Кінець Cook__content-grid */}
-      </div> {/* Кінець Cook__container */}
+        </div> 
+      </div> 
     </section>
   );
 }
